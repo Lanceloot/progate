@@ -152,6 +152,8 @@ header {
   /*width: 300px;*/
 }
 
+/* --- socrates modif start here --------*/
+
 .kelompok-icon {
   position: relative;
   height: 100%;
@@ -165,69 +167,90 @@ header {
   cursor: default;
   background: #fff url(../images/bgimg.jpg) no-repeat center center
 
+
 }
-/*
-.kelompok-icon p {
-  position: absolute;
-  top: 44%;
-  width: 100%;
-  color: white;
-}*/
+
 
 .kelompok-icon .mask, .kelompok-icon .content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    top: 10%;
-    left: 0;
-    z-index: 3;
-
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  top: 10%;
+  left: 0;
+  display: block;
+  z-index: 3;
     /*border: solid 1px black;*/
 }
 .kelompok-icon img {
-    display: block;
-    position: relative;
-    max-height: 200px;
-    top : 10px;
-    left : 6px;
+  display: block;
+  position: relative;
+  max-height: 200px;
+  top : 10px;
+  /*left : 6px;*/
+  margin-left: auto;
+  margin-right: auto;
+  
 }
-
+/**/
 .kelompok-icon .img-top {
   display: none;
   position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
   z-index: 2;
 }
 
 .kelompok-icon h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 12px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 10px 0 0 0;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 1px #979c92;
+  position: relative;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  font-family: arial;
+  font-size: 14px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
 }
+
 .kelompok-icon p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 14px;
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 10px;
-    text-align: center
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 1px #979c92;
+  letter-spacing: 0.08em;
+  position: relative;
+  color: #20211f;
+  padding: 20px 20px 10px;
+  text-align: center;
+  z-index: 4;
+}
+
+.content p {
+  font-family: arial;
+  font-size: 14px;
+  text-shadow: 1px 1px #FF0000;
+  letter-spacing: 0.08em;
+  line-height: 1.4em;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 5px;
+  text-align: center;
 }
 
 .kelompok-icon a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    box-shadow: 0 0 1px #000
-    margin-top : 100px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 14px;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
+  margin-top : 100px;
 }
 .kelompok-icon a.info:hover {
     box-shadow: 0 0 5px #000
@@ -237,7 +260,6 @@ header {
   transition: all 0.2s ease-in;
 }
 .hover-mask .mask { 
-  background-color: rgba(115,146,184, 0.7); 
   width: 100%;
   padding: 300px;
   height: 100%;
@@ -245,24 +267,45 @@ header {
   transform: translate(265px, 145px) rotate(45deg);
   transition: all 0.2s ease-in-out;
 }
+
+.hover-mask .grey {
+  background-color: rgba(115,146,184, 0.5); 
+}
+
+.hover-mask .yellow {
+  background-color: rgba(248, 252, 3, 0.5); 
+}
+
+.hover-mask .blue {
+  background-color: rgba(3, 181, 252, 0.5); 
+}
+
+.hover-mask .pink {
+  background-color: rgba(252, 3, 248, 0.5); 
+}
+
+.hover-mask .green {
+  background-color: rgba(3, 252, 53, 0.5); 
+}
+
 .hover-mask h2 {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    background: transparent;
-    margin: 20px 40px 0px 40px;
-    transform: translate(200px, -200px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 20px 0px 20px;
+  transform: translate(200px, -200px);
   transition: all 0.2s ease-in-out;
 }
-.hover-mask p { 
+.hover-mask .content p { 
   transform: translate(-200px, 200px);
   transition: all 0.2s ease-in-out;
 }
 .hover-mask a.info { 
-    transform: translate(0px, 100px);
+  transform: translate(0px, 150px);
   transition: all 0.2s 0.1s ease-in-out;
 } 
 
 .hover-mask:hover .img-top {
-  display: inline;
+  display: block;
 }
 
 .hover-mask:hover .mask { 
@@ -273,7 +316,7 @@ header {
   transform: translate(0px,0px);
   transition-delay: 0.3s; 
 }
-.hover-mask:hover p { 
+.hover-mask:hover .content p { 
     transform: translate(0px,0px); 
   transition-delay: 0.4s;
 }
@@ -281,6 +324,8 @@ header {
   transform: translate(0px,0px); 
   transition-delay: 0.5s;
 }
+
+/* ---- socrates modif end here  -----------------*/
 
 .text-contents {
   width: 80%;
