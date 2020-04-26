@@ -149,17 +149,137 @@ header {
 .kelompok {
   float: left;
   width: 20%;
+  /*width: 300px;*/
 }
 
 .kelompok-icon {
   position: relative;
-}
+  height: 100%;
+  width : 100%;
+  margin: 10px;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+  background: #fff url(../images/bgimg.jpg) no-repeat center center
 
+}
+/*
 .kelompok-icon p {
   position: absolute;
   top: 44%;
   width: 100%;
   color: white;
+}*/
+
+.kelompok-icon .mask, .kelompok-icon .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 10%;
+    left: 0;
+    z-index: 3;
+
+    /*border: solid 1px black;*/
+}
+.kelompok-icon img {
+    display: block;
+    position: relative;
+    max-height: 200px;
+    top : 10px;
+    left : 6px;
+}
+
+.kelompok-icon .img-top {
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.kelompok-icon h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 10px 0 0 0;
+}
+.kelompok-icon p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 10px;
+    text-align: center
+}
+
+.kelompok-icon a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+    margin-top : 100px;
+}
+.kelompok-icon a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+.hover-mask img {  
+  transition: all 0.2s ease-in;
+}
+.hover-mask .mask { 
+  background-color: rgba(115,146,184, 0.7); 
+  width: 100%;
+  padding: 300px;
+  height: 100%;
+  opacity: 0;
+  transform: translate(265px, 145px) rotate(45deg);
+  transition: all 0.2s ease-in-out;
+}
+.hover-mask h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: translate(200px, -200px);
+  transition: all 0.2s ease-in-out;
+}
+.hover-mask p { 
+  transform: translate(-200px, 200px);
+  transition: all 0.2s ease-in-out;
+}
+.hover-mask a.info { 
+    transform: translate(0px, 100px);
+  transition: all 0.2s 0.1s ease-in-out;
+} 
+
+.hover-mask:hover .img-top {
+  display: inline;
+}
+
+.hover-mask:hover .mask { 
+  opacity:1; 
+  transform: translate(-80px, -125px) rotate(45deg);
+}               
+.hover-mask:hover h2 { 
+  transform: translate(0px,0px);
+  transition-delay: 0.3s; 
+}
+.hover-mask:hover p { 
+    transform: translate(0px,0px); 
+  transition-delay: 0.4s;
+}
+.hover-mask:hover a.info { 
+  transform: translate(0px,0px); 
+  transition-delay: 0.5s;
 }
 
 .text-contents {
